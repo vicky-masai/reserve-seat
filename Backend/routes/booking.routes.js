@@ -46,7 +46,7 @@ const generateSeatNumber = (seatIndex) => {
 };
 
 // Endpoint for fetching the booked seats
-app.get('/booked-seats', (req, res) => {
+app.get('/booked-seats', async(req, res) => {
   Seat.find()
     .then((bookedSeats) => {
       res.json(bookedSeats);

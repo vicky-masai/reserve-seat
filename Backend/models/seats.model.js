@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
 
 const seatSchema = new mongoose.Schema({
-  row: Number,
   seat: Number,
-  isBooked: Boolean,
+  isBooked:{
+    type:Boolean,
+    default:false
+  }
 });
 
 const Seat = mongoose.model('Seat', seatSchema);
