@@ -136,12 +136,12 @@ function SeatBooking() {
       <br />
       <hr />
       <div style={{ marginTop: "20px", display: 'grid', gridTemplateColumns: "repeat(7,1fr)" }}>
-        {seats.map((isBooked, index) => (
+        {seats.map((el, index) => (
           <div
             key={index}
             style={{
               display: "inline-block",
-              backgroundColor: isBooked ? "red" : "green",
+              backgroundColor: el ? "red" : "green",
               padding: "5px",
               margin: "5px",
               color: "white",
